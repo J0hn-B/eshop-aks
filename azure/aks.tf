@@ -53,6 +53,10 @@ resource "azurerm_kubernetes_cluster" "k8s" {
 
   addon_profile {
 
+    kube_dashboard {
+      enabled = true
+    }
+
     oms_agent {
       enabled                    = true
       log_analytics_workspace_id = azurerm_log_analytics_workspace.law_01.id
@@ -60,6 +64,15 @@ resource "azurerm_kubernetes_cluster" "k8s" {
 
   }
 
+  network_profile {
+    load_balancer_sku = "Standard"
+    network_plugin    = "kubenet"
+    load_balancer_profile {
+      outbound_ip_address_ids = [
+        azurerm_public_ip.ingress_ip_01.id
+      ]
+    }
+  }
 
   tags = {
     Environment = "Development"
