@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Create AKS Cluster
+cd ../azure && terraform apply --auto-approve
 
 # Get aks credentials
 az aks get-credentials --resource-group aks --name dev-aks --overwrite-existing
