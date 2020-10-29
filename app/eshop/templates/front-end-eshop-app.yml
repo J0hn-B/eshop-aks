@@ -11,7 +11,7 @@ spec:
   source:
     helm:
       valueFiles:
-        - values.yaml
+        - values-staging.yaml
     path: services/front-end
     repoURL: https://github.com/J0hn-B/eshop.git
     targetRevision: HEAD
