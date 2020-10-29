@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: eshop
+  name: eshop-staging
   namespace: argocd
 spec:
   clusterResourceWhitelist:
     - group: ""
       kind: ""
-  description: eshop project configuration
+  description: eshop-staging project configuration
   destinations:
-    - namespace: eshop
+    - namespace: eshop-staging
       server: https://kubernetes.default.svc
     - namespace: argocd
       server: https://kubernetes.default.svc
@@ -18,3 +18,4 @@ spec:
       kind: "*"
   sourceRepos:
     - https://github.com/J0hn-B/eshop-aks.git
+    - https://github.com/J0hn-B/eshop.git

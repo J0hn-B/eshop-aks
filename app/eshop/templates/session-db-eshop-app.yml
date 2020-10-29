@@ -5,9 +5,9 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: eshop
+    namespace: eshop-staging
     server: https://kubernetes.default.svc
-  project: eshop
+  project: eshop-staging
   source:
     helm:
       valueFiles:
