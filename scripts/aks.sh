@@ -7,7 +7,7 @@ cd ../azure && terraform apply --auto-approve
 az aks get-credentials --resource-group aks --name dev-aks --overwrite-existing
 
 # Install ArgoCD
-source ./argocd_install.sh
+source ../scripts/./argocd_install.sh
 
 # Configure cluster's management
 cd ../k8s && kubectl apply -f argo_config/k8s-project.yml && kubectl apply -f argo_config/k8s-app.yml

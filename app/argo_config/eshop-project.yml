@@ -17,4 +17,4 @@ spec:
     - group: "*"
       kind: "*"
   sourceRepos:
-    - https://github.com/J0hn-B/eshop.git
+    - https://github.com/J0hn-B/eshop-aks.git
