@@ -1,20 +1,20 @@
-# apiVersion: argoproj.io/v1alpha1
-# kind: Application
-# metadata:
-#   name: cert-manager
-#   namespace: argocd
-# spec:
-#   destination:
-#     namespace: cert-manager
-#     server: https://kubernetes.default.svc
-#   project: k8s-config
-#   source:
-#     helm:
-#       valueFiles:
-#       - values.yaml
-#     path: k8s/k8s-charts/cert-manager
-#     repoURL: https://github.com/J0hn-B/eshop-aks.git
-#     targetRevision: HEAD
-#   syncPolicy:
-#     automated:
-#       prune: true
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager
+  namespace: argocd
+spec:
+  destination:
+    namespace: cert-manager
+    server: https://kubernetes.default.svc
+  project: k8s-config
+  source:
+    helm:
+      valueFiles:
+      - values.yaml
+    path: k8s/k8s-charts/cert-manager
+    repoURL: https://github.com/J0hn-B/eshop-aks.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
