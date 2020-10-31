@@ -17,3 +17,11 @@ apiVersion: v1
 metadata:
   name: ingress-basic 
   annotations:
+
+---
+# Eshop namespace
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: eshop-staging
+  annotations:
