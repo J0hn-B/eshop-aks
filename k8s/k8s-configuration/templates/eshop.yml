@@ -1,27 +1,11 @@
+# Eshop namespace
 kind: Namespace
 apiVersion: v1
 metadata:
   name: eshop-staging
 
 ---
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
-metadata:
-  name: eshop-ingress
-  namespace: eshop-staging
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-spec:
-  rules:
-    - http:
-        paths:
-          - backend:
-              serviceName: front-end
-              servicePort: 80
-            path: /
-
----
+# Eshop CertManager
 apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
 metadata:
@@ -40,3 +24,22 @@ spec:
             spec:
               nodeSelector:
                 "kubernetes.io/os": linux
+
+---
+# Eshop Ingress
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: eshop-ingress
+  namespace: eshop-staging
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              serviceName: front-end
+              servicePort: 80
+            path: /
