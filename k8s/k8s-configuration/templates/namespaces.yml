@@ -2,15 +2,21 @@ kind: Namespace
 apiVersion: v1
 metadata:
   name: chaos-testing
+  annotations:
+    argocd.argoproj.io/hook: PreSync
 
 ---
 kind: Namespace
 apiVersion: v1
 metadata:
   name: cert-manager
+  annotations:
+    argocd.argoproj.io/hook: PreSync
 
 ---
 kind: Namespace
 apiVersion: v1
 metadata:
   name: ingress-basic 
+  annotations:
+    argocd.argoproj.io/hook: PreSync
