@@ -11,7 +11,7 @@ kind: ClusterIssuer
 metadata:
   name: letsencrypt
   annotations:
-    argocd.argoproj.io/hook: PostSync 
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
@@ -35,7 +35,7 @@ metadata:
   name: eshop-ingress
   namespace: eshop-staging
   annotations:
-    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/sync-wave: "1"
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
