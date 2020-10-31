@@ -5,6 +5,7 @@ metadata:
   name: eshop-staging
   annotations:
     argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 
 ---
 # Eshop CertManager
