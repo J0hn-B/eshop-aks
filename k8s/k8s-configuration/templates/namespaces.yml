@@ -8,13 +8,6 @@ metadata:
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: cert-manager
-  annotations:
-
----
-kind: Namespace
-apiVersion: v1
-metadata:
   name: ingress-basic 
   annotations:
 
