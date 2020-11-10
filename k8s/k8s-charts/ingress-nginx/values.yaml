@@ -305,7 +305,8 @@ controller:
   service:
     enabled: true
 
-    annotations: {}
+    annotations: #{}
+      service\.beta\.kubernetes\.io/azure-dns-label-name: dev-aks-eshop.northeurope.cloudapp.azure.com ####################################### AKS ####################################
     labels: {}
     # clusterIP: ""
 
@@ -314,7 +315,7 @@ controller:
     ##
     externalIPs: []
 
-    # loadBalancerIP: ""
+     loadBalancerIP: 51.104.155.232 ####################################### AKS ####################################
     loadBalancerSourceRanges: []
 
     enableHttp: true
@@ -413,11 +414,10 @@ controller:
     port: 8443
 
     service:
-      annotations: #{}
-        service\.beta\.kubernetes\.io/azure-dns-label-name: dev-aks-eshop.northeurope.cloudapp.azure.com ####################################### AKS ####################################
+      annotations: {}
       # clusterIP: ""
       externalIPs: []
-      loadBalancerIP: 51.104.155.232 ####################################### AKS ####################################
+      #loadBalancerIP: 
       loadBalancerSourceRanges: []
       servicePort: 443
       type: ClusterIP
