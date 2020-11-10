@@ -37,7 +37,7 @@ metadata:
 spec:
   tls: 
   - hosts:
-    - 20.54.123.136
+    - johnb.northeurope.cloudapp.azure.com
     secretName: letsencrypt
   rules:
     - http:
