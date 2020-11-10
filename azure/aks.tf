@@ -67,11 +67,7 @@ resource "azurerm_kubernetes_cluster" "k8s" {
   network_profile {
     load_balancer_sku = "Standard"
     network_plugin    = "kubenet"
-    load_balancer_profile {
-      outbound_ip_address_ids = [
-        azurerm_public_ip.ingress_ip_01.id
-      ]
-    }
+
   }
 
   tags = {

@@ -36,10 +36,10 @@ metadata:
 spec:
   tls: 
   - hosts:
-    - johnb.northeurope.cloudapp.azure.com
+    - dev-aks-eshop.northeurope.cloudapp.azure.com
     secretName: letsencrypt
   rules:
-    - host: johnb.northeurope.cloudapp.azure.com
+    - host: dev-aks-eshop.northeurope.cloudapp.azure.com
       http:
         paths:
           - backend:

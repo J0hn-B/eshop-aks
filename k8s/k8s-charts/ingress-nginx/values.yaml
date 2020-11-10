@@ -305,7 +305,9 @@ controller:
   service:
     enabled: true
 
-    annotations: {}
+    annotations: #{}
+      service.beta.kubernetes.io/azure-dns-label-name: dev-aks-eshop             ##### (aks) dns name ##### 
+      service.beta.kubernetes.io/azure-load-balancer-resource-group: aks         ##### (aks) resource group of public ip. Important for aks to pick up the ip #####
     labels: {}
     # clusterIP: ""
 
@@ -314,7 +316,7 @@ controller:
     ##
     externalIPs: []
 
-    # loadBalancerIP:
+    loadBalancerIP: 20.54.33.82     ##### (aks) public ip for ingress ##### 
     loadBalancerSourceRanges: []
 
     enableHttp: true
