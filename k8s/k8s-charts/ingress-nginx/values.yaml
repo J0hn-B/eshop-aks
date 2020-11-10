@@ -315,7 +315,7 @@ controller:
     ##
     externalIPs: []
 
-    loadBalancerIP: 51.104.155.232 ####################################### AKS ####################################
+    loadBalancerIP: "51.104.155.232" ####################################### AKS ####################################
     loadBalancerSourceRanges: []
 
     enableHttp: true
