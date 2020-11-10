@@ -307,6 +307,7 @@ controller:
 
     annotations:
       service\.beta\.kubernetes\.io/azure-dns-label-name: "dev-aks-eshop.northeurope.cloudapp.azure.com" ####################################### AKS ####################################
+      service.beta.kubernetes.io/azure-load-balancer-resource-group: aks
     labels: {}
     # clusterIP: ""
 
