@@ -413,10 +413,11 @@ controller:
     port: 8443
 
     service:
-      annotations: {}
+      annotations: #{}
+        service\.beta\.kubernetes\.io/azure-dns-label-name: dev-aks-eshop.northeurope.cloudapp.azure.com
       # clusterIP: ""
       externalIPs: []
-      # loadBalancerIP: ""
+      loadBalancerIP: "51.104.155.232"
       loadBalancerSourceRanges: []
       servicePort: 443
       type: ClusterIP
