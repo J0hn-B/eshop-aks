@@ -306,7 +306,7 @@ controller:
     enabled: true
 
     annotations: #{}
-      service\.beta\.kubernetes\.io/azure-dns-label-name: dev-aks-eshop.northeurope.cloudapp.azure.com ####################################### AKS ####################################
+      service\.beta\.kubernetes\.io/azure-dns-label-name: "dev-aks-eshop.northeurope.cloudapp.azure.com" ####################################### AKS ####################################
     labels: {}
     # clusterIP: ""
 
