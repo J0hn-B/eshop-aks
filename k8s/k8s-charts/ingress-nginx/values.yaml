@@ -316,7 +316,7 @@ controller:
     ##
     externalIPs: []
 
-    loadBalancerIP:      ##### (aks) public ip for ingress ##### TODO: update ip
+    loadBalancerIP: 51.104.154.138     ##### (aks) public ip for ingress ##### TODO: update ip
 
     loadBalancerSourceRanges: []
 
