@@ -22,7 +22,7 @@ spec:
 {{- end }}
 {{- if .Values.controller.service.loadBalancerIP }}
   loadBalancerIP: 
-     secretKeyRef: ingress-ip
+     secretKeyRef: ingress-ip #TODO:check the ip
      key: public-ip
 {{- end }}
 {{- if .Values.controller.service.loadBalancerSourceRanges }}
