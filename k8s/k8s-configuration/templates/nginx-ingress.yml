@@ -19,3 +19,17 @@ spec:
   syncPolicy:
     automated:
       prune: true
+
+---
+apiVersion: kubernetes-client.io/v1
+kind: ExternalSecret
+metadata:
+  name: ingress-ip
+  namespace: ingress-basic
+spec:
+  backendType: azureKeyVault
+  keyVaultName: aks-rotation-key-vault
+  data:
+    - key: public-ip
+      name: ingress-ip-01
+      isBinary: true
