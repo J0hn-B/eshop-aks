@@ -18,3 +18,10 @@ apiVersion: v1
 metadata:
   name: eshop-staging
   annotations:
+
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: external-secrets
+  annotations:
