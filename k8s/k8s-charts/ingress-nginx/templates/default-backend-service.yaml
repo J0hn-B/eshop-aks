@@ -19,7 +19,8 @@ spec:
 {{- end }}
 {{- if .Values.defaultBackend.service.loadBalancerIP }}
   loadBalancerIP: 
-     secretKeyRef: ingress-ip #TODO:check the ip 2
+    secretKeyRef: 
+     name: ingress-ip #TODO:check the ip
      key: public-ip
 {{- end }}
 {{- if .Values.defaultBackend.service.loadBalancerSourceRanges }}
