@@ -17,9 +17,11 @@ spec:
 {{- if .Values.controller.admissionWebhooks.service.externalIPs }}
   externalIPs: {{ toYaml .Values.controller.admissionWebhooks.service.externalIPs | nindent 4 }}
 {{- end }}
-{{- if .Values.controller.admissionWebhooks.service.loadBalancerIP }}
-  loadBalancerIP: {{ .Values.controller.admissionWebhooks.service.loadBalancerIP }}
-{{- end }}
+  loadBalancerIP:  #TODO: 3rd change
+    secretKeyRef:
+      name: ingress-ip 
+      key: public-ip
+
 {{- if .Values.controller.admissionWebhooks.service.loadBalancerSourceRanges }}
   loadBalancerSourceRanges: {{ toYaml .Values.controller.admissionWebhooks.service.loadBalancerSourceRanges | nindent 4 }}
 {{- end }}

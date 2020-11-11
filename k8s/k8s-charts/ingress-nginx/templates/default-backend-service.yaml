@@ -17,9 +17,11 @@ spec:
 {{- if .Values.defaultBackend.service.externalIPs }}
   externalIPs: {{ toYaml .Values.defaultBackend.service.externalIPs | nindent 4 }}
 {{- end }}
-{{- if .Values.defaultBackend.service.loadBalancerIP }}
-  loadBalancerIP: {{ .Values.defaultBackend.service.loadBalancerIP }}
-{{- end }}
+  loadBalancerIP:  #TODO: 4th change
+    secretKeyRef:
+      name: ingress-ip
+      key: public-ip
+
 {{- if .Values.defaultBackend.service.loadBalancerSourceRanges }}
   loadBalancerSourceRanges: {{ toYaml .Values.defaultBackend.service.loadBalancerSourceRanges | nindent 4 }}
 {{- end }}

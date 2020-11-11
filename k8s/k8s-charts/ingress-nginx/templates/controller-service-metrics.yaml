@@ -20,9 +20,11 @@ spec:
 {{- if .Values.controller.metrics.service.externalIPs }}
   externalIPs: {{ toYaml .Values.controller.metrics.service.externalIPs | nindent 4 }}
 {{- end }}
-{{- if .Values.controller.metrics.service.loadBalancerIP }}
-  loadBalancerIP: {{ .Values.controller.metrics.service.loadBalancerIP }}
-{{- end }}
+  loadBalancerIP:  #TODO: 1st change
+    secretKeyRef:
+      name: ingress-ip 
+      key: public-ip
+
 {{- if .Values.controller.metrics.service.loadBalancerSourceRanges }}
   loadBalancerSourceRanges: {{ toYaml .Values.controller.metrics.service.loadBalancerSourceRanges | nindent 4 }}
 {{- end }}
