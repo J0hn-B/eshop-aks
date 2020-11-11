@@ -23,7 +23,7 @@ env:
   VAULT_ADDR: http://127.0.0.1:8200
 #  GOOGLE_APPLICATION_CREDENTIALS: /app/gcp-creds/gcp-creds.json
 
-Create environment variables from existing k8s secrets
+# Create environment variables from existing k8s secrets
 envVarsFromSecret:
 #  AWS_ACCESS_KEY_ID:
 #    secretKeyRef: aws-credentials
