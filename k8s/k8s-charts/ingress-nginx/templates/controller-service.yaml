@@ -21,9 +21,9 @@ spec:
   externalIPs: {{ toYaml .Values.controller.service.externalIPs | nindent 4 }}
 {{- end }}
   loadBalancerIP: ######last change#####
-      secretKeyRef: 
-        name: ingress-ip 
-        key: public-ip
+    secretKeyRef: 
+      name: ingress-ip 
+      key: public-ip
 {{- if .Values.controller.service.loadBalancerSourceRanges }}
   loadBalancerSourceRanges: {{ toYaml .Values.controller.service.loadBalancerSourceRanges | nindent 4 }}
 {{- end }}
