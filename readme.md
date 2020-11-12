@@ -1,4 +1,4 @@
-# AKS sample application with ArgoCD
+# AKS sample application with ArgoCD PoC demo
 
 At a glance:
 
