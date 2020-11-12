@@ -1,16 +1,4 @@
-## Tools **
-1) Gremlin (chaos testing)
-
-
-
-
-
-# port-forward ArgoCD
-kubectl port-forward svc/argocd-server -n argocd 8080:443
-
-# port-forward shop
-kubectl port-forward svc/front-end  -n eshop 39391:80
-
+## Chaos Testing Notes
 
 # Create service account
 
