@@ -19,5 +19,5 @@ if [[ "$OUTPUT" = *"not found"* ]]; then
         -n external-secrets
 else
     echo "Azure Credentials secrets located at external-secrets namespace. Nothing to do :)"
-    exit 1
+    exit 0
 fi
