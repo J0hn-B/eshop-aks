@@ -19,12 +19,7 @@ cd ../k8s && kubectl apply -f argo_config/k8s-project.yml && kubectl apply -f ar
 ##cd ../app && kubectl apply -f argo_config/eshop-project.yml && kubectl apply -f argo_config/eshop-app.yml
 
 # Access ArgoCD web interface
-kubectl port-forward svc/argocd-server -n argocd 8080:443
-
-
-
-
-
+# kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 ******************************************************************
 # With stopped AKS cluster zero charges apply
