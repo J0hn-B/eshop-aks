@@ -17,6 +17,8 @@ This chart is responsible for the K8s cluster management.
 
 1:Login to Azure
 
-2: from your terminal go to ~/eshop-aks/scripts and run ./aks.sh
+2: Update the data_resources.tf in azure folder
+
+3: from your terminal go to ~/eshop-aks/scripts and run ./aks.sh
 
 services at: <https://github.com/J0hn-B/eshop>

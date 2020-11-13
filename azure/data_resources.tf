@@ -1,4 +1,4 @@
-# Service principal credentials received from a vault. Replace accordingly
+# * Service principal credentials received from a vault. Replace accordingly
 
 # Access the resource azure key-vault
 data "azurerm_key_vault" "vault_01" {
