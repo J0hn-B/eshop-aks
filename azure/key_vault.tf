@@ -1,15 +1,5 @@
 # Create Azure Key Vault for the AKS cluster
 
-data "azurerm_key_vault_secret" "terr_sp_tenant_id" {
-  name         = "tenant"
-  key_vault_id = data.azurerm_key_vault.vault_01.id
-}
-
-data "azurerm_key_vault_secret" "terr_sp_object_id" {
-  name         = "object-id"
-  key_vault_id = data.azurerm_key_vault.vault_01.id
-}
-
 resource "azurerm_key_vault" "aks_kv_01" {
   name                        = "aks-rotation-key-vault"
   location                    = azurerm_resource_group.aks.location

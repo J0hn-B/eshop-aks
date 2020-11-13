@@ -87,15 +87,3 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     Environment = "Development"
   }
 }
-
-# Get terraform service principal client id 
-data "azurerm_key_vault_secret" "terr_sp_client_id" {
-  name         = "appId"
-  key_vault_id = data.azurerm_key_vault.vault_01.id
-}
-
-# Get terraform service principal secret
-data "azurerm_key_vault_secret" "terr_sp_client_secret" {
-  name         = "password"
-  key_vault_id = data.azurerm_key_vault.vault_01.id
-}

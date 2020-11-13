@@ -12,8 +12,3 @@ terraform {
     key                  = "azure_k8s.tfstate"
   }
 }
-# Access the environment azure key-vault
-data "azurerm_key_vault" "vault_01" {
-  name                = "terraform-keyvault01"
-  resource_group_name = "azure-key-vault"
-}
