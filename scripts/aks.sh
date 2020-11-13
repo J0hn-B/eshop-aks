@@ -15,6 +15,8 @@ source ../scripts/./external-secrets.sh
 # Configure cluster's management
 cd ../k8s && kubectl apply -f argo_config/k8s-project.yml && kubectl apply -f argo_config/k8s-app.yml
 
+# ? Important: Update the loadBalancerIP public ip in the nginx chart: ~/eshop-aks/k8s/k8s-charts/ingress-nginx/values.yaml  (line: 319)
+
 # Deploy the application
 ##cd ../app && kubectl apply -f argo_config/eshop-project.yml && kubectl apply -f argo_config/eshop-app.yml
 
