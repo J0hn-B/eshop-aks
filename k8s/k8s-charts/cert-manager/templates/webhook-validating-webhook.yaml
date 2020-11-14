@@ -32,7 +32,6 @@ webhooks:
         operator: "NotIn"
         values:
         - {{ .Release.Namespace }}
-
     rules:
       - apiGroups:
           - "cert-manager.io"
