@@ -11,6 +11,11 @@ spec:
   project: k8s-config
   source:
     helm:
+      # Extra parameters to set (same as setting through values.yaml, but these take precedence)
+      parameters:
+      - name: "controller.service.loadBalancerIP"
+        value: "{{ .Values.controller.service.loadBalancerIP }}"
+        forceString: true # ensures that value is treated as a string
       valueFiles:
       - values.yaml
     path: k8s/k8s-charts/ingress-nginx
