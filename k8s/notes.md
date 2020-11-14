@@ -16,19 +16,6 @@
 
   kubectl patch service nginx-ingress-ingress-nginx-controller -n ingress-basic -p '{"spec":{"loadBalancerIP":"20.54.94.247"}}'
 
-## Azure get public ip
-  
-  az network public-ip show -g aks -n ingress-ip-01 --query ipAddress -o tsv
-
 ## Override Helm values
 
   Check  nginx-ingress.yml at k8s-configuration Helm chart
-
-
-PUBLIC_IP=$(az network public-ip show -g aks -n ingress-ip-01 --query ipAddress -o tsv)
-
-
-
-
-
-"##vso[task.setvariable variable=public_ip]$PUBLIC_IP"

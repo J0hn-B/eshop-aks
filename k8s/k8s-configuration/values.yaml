@@ -1,4 +1,4 @@
 # ArgoCD nginx-ingress app settings
 controller:
   service:
-    loadBalancerIP: $(PIP)
+    loadBalancerIP: 52.236.0.130
