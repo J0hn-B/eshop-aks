@@ -25,12 +25,11 @@ cd ../k8s && kubectl apply -f argo_config/k8s-project.yml && kubectl apply -f ar
 # kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 ******************************************************************
-# With stopped AKS cluster zero charges apply
-
-# Stop the cluster
-# * az aks stop -n dev-aks -g aks
-
-# Start the cluster
-# * az aks start -n dev-aks -g aks
-
+# 1:Login to Azure
+#
+# 2: Update the data_resources.tf in azure folder
+#
+# 3: from your terminal go to ~/eshop-aks/scripts and run ./aks.sh
+#
+# services at: https://github.com/J0hn-B/eshop
 ******************************************************************
