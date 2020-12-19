@@ -1,4 +1,6 @@
-# AKS sample application with ArgoCD PoC demo
+# AKS sample application with ArgoCD
+
+- Status: Ready to deploy
 
 GitOps project, based on ArgoCD. App of apps deployment style.
 
