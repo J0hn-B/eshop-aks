@@ -1,5 +1,9 @@
 # AKS sample application with ArgoCD PoC demo
 
+GitOps project, based on ArgoCD. App of apps deployment style.
+
+Use as reference.
+
 At a glance:
 
 - 1: app: contains the argo project, the app for the eshop project and the helm chart (eshop) which creates the services. Services are on eshop repo.
@@ -12,13 +16,3 @@ For the step by step configuration read the scripts/aks.sh
 - Helm Charts are stored in k8s/k8s-charts folder. *(fetch, update values and push to the repo)*
 - K8s-configuration is a Helm chart, which creates a seperate argocd app for every Helm Chart. *(App of Apps)*
 This chart is responsible for the K8s cluster management.
-
-## Using the project
-
-1:Login to Azure
-
-2: Update the data_resources.tf in azure folder
-
-3: from your terminal go to ~/eshop-aks/scripts and run ./aks.sh
-
-services at: <https://github.com/J0hn-B/eshop>
