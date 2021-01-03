@@ -1,6 +1,5 @@
 # AKS sample application with ArgoCD
 
-> [!NOTE]
 > AKS version of "GitOps K8s sample application deployment with ArgoCD". Use as reference.
 
 GitOps project, based on ArgoCD. App of apps deployment style.
